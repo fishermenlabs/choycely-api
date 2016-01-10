@@ -20,8 +20,8 @@ class CreateQuestionTable extends Migration
             $table->foreign('user_id')
                 ->references('id')->on('users');
 
-            $table->string('image1_url');
-            $table->string('image2_url');
+            $table->longText('image1_url');
+            $table->longText('image2_url');
             $table->timestamps();
             $table->softDeletes();
         });

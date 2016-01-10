@@ -84,19 +84,23 @@ class QuestionController extends Controller
         {
             $image_root_path = '/question_images/';
 
-            $image1 = $request->file('image1');
-            $image1->move(base_path() . $image_root_path, $image1->getClientOriginalName());
+            $image1 = $request->get('image1');
+            //$image1 = $request->file('image1');
+            //$image1->move(base_path() . $image_root_path, $image1->getClientOriginalName());
 
-            $image2 = $request->file('image2');
-            $image2->move(base_path() . $image_root_path, $image2->getClientOriginalName());
+            $image2 = $request->get('image2');
+            //$image2 = $request->file('image2');
+            //$image2->move(base_path() . $image_root_path, $image2->getClientOriginalName());
 
             $question_title = $request->get('question_title');
 
             // store Question
             $question = new Question;
             $question->question_title = $question_title;
-            $question->image1_url = $image_root_path . $image1->getClientOriginalName();
-            $question->image2_url = $image_root_path . $image2->getClientOriginalName();
+            //$question->image1_url = $image_root_path . $image1->getClientOriginalName();
+            //$question->image2_url = $image_root_path . $image2->getClientOriginalName();
+            $question->image1_url = $image1;
+            $question->image2_url = $image2;
             $question->user_id = $user->id;
             $question->save();
 

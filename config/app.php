@@ -161,6 +161,7 @@ return [
          */
         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
         Barryvdh\Cors\ServiceProvider::class,
+        Clockwork\Support\Laravel\ClockworkServiceProvider::class,
 
     ],
 

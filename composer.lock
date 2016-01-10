@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "527d3242f1e1a83a5955fd83cf61935f",
-    "content-hash": "b02eb4463a65141811c0cd77e755f723",
+    "hash": "ace49f4fa4284e44a65240429c1aadf2",
+    "content-hash": "b84dbb73842c4eeb532b8d859bf619d9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -252,6 +252,51 @@
                 "string"
             ],
             "time": "2015-11-06 14:35:42"
+        },
+        {
+            "name": "itsgoingd/clockwork",
+            "version": "v1.10.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/itsgoingd/clockwork.git",
+                "reference": "f14f8e91a34efd0d17e8350a1db5d436154bec87"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/itsgoingd/clockwork/zipball/f14f8e91a34efd0d17e8350a1db5d436154bec87",
+                "reference": "f14f8e91a34efd0d17e8350a1db5d436154bec87",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9",
+                "psr/log": "1.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Clockwork": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "itsgoingd",
+                    "email": "itsgoingd@luzer.sk",
+                    "homepage": "http://twitter.com/itsgoingd"
+                }
+            ],
+            "description": "Server-side component of Clockwork, a Chrome extension for PHP development",
+            "homepage": "http://github.com/itsgoingd/clockwork",
+            "keywords": [
+                "debugging",
+                "laravel",
+                "logging",
+                "profiling"
+            ],
+            "time": "2016-01-07 15:13:57"
         },
         {
             "name": "jakub-onderka/php-console-color",

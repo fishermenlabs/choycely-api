@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\User;
+use Illuminate\Support\Facades\DB;
 
 class UserSeeder extends Seeder
 {
@@ -11,7 +13,7 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        Model::unguard();
+        User::unguard();
 
         DB::table('users')->delete();
 
@@ -28,6 +30,6 @@ class UserSeeder extends Seeder
             User::create($user);
         }
 
-        Model::reguard();
+        User::reguard();
     }
 }

@@ -160,6 +160,7 @@ return [
          * Additional Service Providers
          */
         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
+        Barryvdh\Cors\ServiceProvider::class,
 
     ],
 

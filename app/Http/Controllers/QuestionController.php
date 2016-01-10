@@ -39,6 +39,19 @@ class QuestionController extends Controller
 
     }
 
+    public function get(Request $request) {
+        $user = JWTAuth::parseToken()->authenticate();
+
+        if($user === null)
+        {
+            return response()->json(500);
+        }
+        else
+        {
+
+        }
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -70,6 +83,7 @@ class QuestionController extends Controller
             $question->question_title = $question_title;
             $question->image1_url = $image_root_path . $image1->getClientOriginalName();
             $question->image2_url = $image_root_path . $image2->getClientOriginalName();
+            $question->user_id = $user->id;
             $question->save();
 
             return $question->toJson();

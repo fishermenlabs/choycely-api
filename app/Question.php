@@ -12,4 +12,14 @@ class Question extends Model
      * @var string
      */
     protected $table = 'question';
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+
+    public function vote()
+    {
+        return $this->hasMany('App\Vote');
+    }
 }

@@ -18,7 +18,7 @@ class CreateQuestionTable extends Migration
             $table->unsignedBigInteger('user_id')->nullable();
 
             $table->foreign('user_id')
-                ->references('id')->on('user');
+                ->references('id')->on('users');
 
             $table->string('image1_url');
             $table->string('image2_url');

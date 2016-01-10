@@ -20,7 +20,7 @@ class CreateVoteTable extends Migration
             $table->unsignedBigInteger('question_id')->nullable();
 
             $table->foreign('user_id')
-                ->references('id')->on('user');
+                ->references('id')->on('users');
             $table->foreign('question_id')
                 ->references('id')->on('question');
 

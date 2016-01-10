@@ -39,7 +39,7 @@ class QuestionController extends Controller
 
     }
 
-    public function get(Request $request) {
+    public function get() {
         $user = JWTAuth::parseToken()->authenticate();
 
         if($user === null)
@@ -48,7 +48,21 @@ class QuestionController extends Controller
         }
         else
         {
+            // TODO
+        }
+    }
 
+    public function getAll()
+    {
+        $user = JWTAuth::parseToken()->authenticate();
+
+        if($user === null)
+        {
+            return response()->json(500);
+        }
+        else
+        {
+            return Question::all()->toJson();
         }
     }
 

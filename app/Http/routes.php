@@ -35,4 +35,5 @@ Route::group(['prefix' => 'api/v1', 'middleware' => 'cors'], function() {
     Route::post('authenticate', 'AuthenticateController@authenticate');
 
     Route::post('question', 'QuestionController@store');
+    Route::get('questions/all', 'QuestionController@getAll');
 });

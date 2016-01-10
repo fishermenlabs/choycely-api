@@ -55,7 +55,7 @@ class QuestionController extends Controller
         }
         else
         {
-            $image_root_path = '/public/question_images/';
+            $image_root_path = '/question_images/';
 
             $image1 = $request->file('image1');
             $image1->move(base_path() . $image_root_path, $image1->getClientOriginalName());
